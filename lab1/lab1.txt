@@ -1,0 +1,447 @@
+# 1
+
+Input
+------
+cat /etc/shells
+
+Output
+------
+# /etc/shells: valid login shells
+/bin/sh
+/bin/bash
+/bin/rbash
+/bin/dash
+/usr/bin/tmux
+/usr/bin/screen
+
+# 2
+
+Input
+------
+cal
+
+Output
+------
+    January 2020
+Su Mo Tu We Th Fr Sa
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30 31
+
+# 3
+
+Input
+------
+echo "text"
+
+Output
+------
+text
+
+# 4
+
+Input
+------
+bc
+
+Output
+------
+bc 1.07.1
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type `warranty'.
+1+1
+2
+2/3
+0
+quit
+
+# 5
+
+Input
+------
+clear
+
+# 6
+
+Input
+------
+man ls
+
+Output
+------
+LS(1)                                                                       User Commands                                                                       LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION                                                                                 phabetically if none of -cftuvSUX nor --sort is specified.
+       List information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+
+       --author
+ Manual page ls(1) line 1 (press h for help or q to quit)...skipping...
+LS(1)                                                                       User Commands
+                                                                    LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List information about the FILEs (the current directory by default).  Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+
+       --author
+              with -l, print the author of each file
+
+       -b, --escape
+              print C-style escapes for nongraphic characters
+
+       --block-size=SIZE
+              scale sizes by SIZE before printing them; e.g., '--block-size=M' prints sizes
+in units of 1,048,576 bytes; see SIZE format below
+
+       -B, --ignore-backups
+              do not list implied entries ending with ~
+
+       -c     with  -lt:  sort  by,  and show, ctime (time of last modification of file status information); with -l: show ctime and sort by name; otherwise: sort by
+              ctime, newest first
+
+       -C     list entries by columns
+
+       --color[=WHEN]
+              colorize the output; WHEN can be 'always' (default if omitted), 'auto', or 'never'; more info below
+
+       -d, --directory
+              list directories themselves, not their contents
+
+ Manual page ls(1) line 1 (press h for help or q to quit)
+
+# 7
+
+Input
+------
+ls -l
+
+Output
+------
+ total 0
+-rwxrwxrwx 1 nougat nougat   39 Jan 10 10:13 README.md
+drwxrwxrwx 1 nougat nougat 4096 Jan 10 13:41 lab1
+
+# 7
+
+Input
+------
+ls -l
+
+Output
+------
+ total 0
+-rwxrwxrwx 1 nougat nougat   39 Jan 10 10:13 README.md
+drwxrwxrwx 1 nougat nougat 4096 Jan 10 13:41 lab1
+
+# 8
+
+Input
+------
+pwd
+
+Output
+------
+/mnt/c/Users/anudit/Documents/GitHub/os-20
+
+# 9
+
+Input
+------
+mkdir newdir
+
+# 10
+
+Input
+------
+cd newdir
+
+# 11
+
+Input
+------
+rmdir newdir
+
+# 12
+
+Input
+------
+cat > new2.txt
+
+# 13
+
+Input
+------
+sort new.txt
+
+Output
+------
+a
+b
+c
+d
+e
+
+# 14
+
+Input
+------
+cp new.txt /newdir/new.txt
+
+# 15
+
+Input
+------
+mv new.txt /newdir/new2.txt
+
+# 16
+
+Input
+------
+rm new.txt
+
+# 17
+
+Input
+------
+wc new.txt
+
+Output
+------
+ 5  5 15 new.txt
+
+# 18
+
+Input
+------
+pg new.txt
+
+Output
+------
+b
+a
+d
+c
+e
+
+# 19
+
+Input
+------
+head new.txt
+
+Output
+------
+b
+a
+d
+c
+e
+
+# 20
+
+Input
+------
+tail new.txt
+
+Output
+------
+b
+a
+d
+c
+e
+
+# 21
+
+Input
+------
+grep "new" new.txt
+
+Output
+------
+b : "new"
+a : "new1"
+d : "new2"
+c : "new3"
+e : "new4"
+
+# 22
+
+Input
+------
+ls -l | more
+
+Output
+------
+total 24
+-rwxrwxrwx 1 nougat nougat 15218 Jan 10 13:41 Lab 1.docx
+-rwxrwxrwx 1 nougat nougat  4452 Jan 10 14:01 lab1.txt
+-rwxrwxrwx 1 nougat nougat    59 Jan 10 14:01 new.txt
+
+# 23
+
+Input
+------
+ps -a
+
+Output
+------
+  PID TTY          TIME CMD
+    9 tty1     00:00:00 bash
+   98 tty1     00:00:00 ps
+
+# 24
+
+Input
+------
+find lab1/
+
+Output
+------
+lab1/
+lab1/Lab 1.docx
+lab1/lab1.txt
+lab1/new.txt
+lab1/~$Lab 1.docx
+
+# 25
+
+Input
+------
+ifconfig
+
+Output
+------
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 1500
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0xfe<compat,link,site,host>
+        loop  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wifi0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.12.1.158  netmask 255.255.0.0  broadcast 10.12.255.255
+        inet6 fe80::2da5:c1b6:2479:4c48  prefixlen 64  scopeid 0xfd<compat,link,site,host>
+        ether 74:40:bb:84:cf:eb  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+# 26
+
+Input
+------
+ifconfig
+
+Output
+------
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+
+# 27
+
+Input
+------
+sudo -s
+
+# 28
+
+Input
+------
+apt-get install sl
+
+# 29
+
+Input
+------
+tar -cvf new.tar lab1/new.txt
+
+Output
+------
+lab1/new.txt
+
+# 30
+
+Input
+------
+zip lab1/new.txt
+
+# 31
+
+Input
+------
+zip lab1/new.txt
+
+# 32
+
+Input
+------
+cd /usr/bin && ls
+
+
+Output
+------
+addpart                              ngettext
+ addr2line                            nice
+ apport-bug                           nl
+ .....
+
+# 33
+
+Input
+------
+python new.py
+
+
+# 34
+
+Input
+------
+pip install flask
+
+# 34
+
+Input
+------
+pip install flask
+
+# 35
+
+Input
+------
+pip install flask
