@@ -26,3 +26,4 @@ void main() {
       printf("%d is not a prime.\n", n);
 
 }
+// gcc q6.c && ./a.out
